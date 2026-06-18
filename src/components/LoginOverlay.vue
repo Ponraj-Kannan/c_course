@@ -4,7 +4,8 @@ import { authState, logout } from '../auth'
 
 const ADMIN_EMAILS = [
   'ponrajacc@gmail.com',
-  'gunatamil123@gmail.com'
+  'gunatamil123@gmail.com',
+  'learning@faceprep.in'
 ]
 
 // ── Zoho OAuth configuration ─────────────────────────────────────────────────

@@ -47,36 +47,40 @@ transition: slide-up
 
 <div style="margin-top:10px;">
   <table class="cmp-table">
-    <tr v-click>
-      <th>Feature</th>
-      <th>if-elif-else</th>
-      <th>match-case</th>
-    </tr>
-    <tr v-click>
-      <td>Python version</td>
-      <td>All versions</td>
-      <td class="yes">3.10+ only</td>
-    </tr>
-    <tr v-click>
-      <td>Range conditions (>, &lt;)</td>
-      <td class="yes">✅ Yes</td>
-      <td class="no">❌ Not directly</td>
-    </tr>
-    <tr v-click>
-      <td>Exact value matching</td>
-      <td>✅ Yes</td>
-      <td class="yes">✅ Cleaner syntax</td>
-    </tr>
-    <tr v-click>
-      <td>Default handler</td>
-      <td><code>else:</code></td>
-      <td class="yes"><code>case _:</code></td>
-    </tr>
-    <tr v-click>
-      <td>Best for</td>
-      <td>Complex conditions, ranges</td>
-      <td class="yes">Multiple exact values</td>
-    </tr>
+    <thead>
+      <tr v-click>
+        <th>Feature</th>
+        <th>if-elif-else</th>
+        <th>match-case</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr v-click>
+        <td>Python version</td>
+        <td>All versions</td>
+        <td class="yes">3.10+ only</td>
+      </tr>
+      <tr v-click>
+        <td>Range conditions (>, &lt;)</td>
+        <td class="yes">✅ Yes</td>
+        <td class="no">❌ Not directly</td>
+      </tr>
+      <tr v-click>
+        <td>Exact value matching</td>
+        <td>✅ Yes</td>
+        <td class="yes">✅ Cleaner syntax</td>
+      </tr>
+      <tr v-click>
+        <td>Default handler</td>
+        <td><code>else:</code></td>
+        <td class="yes"><code>case _:</code></td>
+      </tr>
+      <tr v-click>
+        <td>Best for</td>
+        <td>Complex conditions, ranges</td>
+        <td class="yes">Multiple exact values</td>
+      </tr>
+    </tbody>
   </table>
 </div>
   </template>

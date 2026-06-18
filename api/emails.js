@@ -2,6 +2,7 @@ import fs from 'node:fs'
 import path from 'node:path'
 import { initializeApp } from 'firebase/app'
 import { getFirestore, doc, getDoc, setDoc } from 'firebase/firestore'
+import { sendWelcomeEmailInternal } from './send-welcome.js'
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
@@ -21,6 +22,7 @@ const db = getFirestore(firebaseApp)
 const ADMIN_EMAILS = [
   'ponrajacc@gmail.com',
   'gunatamil123@gmail.com',
+  'learning@faceprep.in'
 ]
 
 // Global cache in case filesystem is read-only (e.g. on Vercel)
@@ -217,6 +219,24 @@ export default async function handler(req, res) {
       const isSaved = saveResult.success || !saveResult.readOnly
       if (!isSaved) {
         return res.status(500).json({ error: 'Database Write Error: Failed to save changes to Firestore database and local storage is read-only.' })
+      }
+
+      // ── Fire-and-forget welcome emails for each newly added address ──────
+      // We send after a successful save so we never email for failed writes.
+      // Failures here are non-fatal — the admin still gets a 200 response.
+      const newlyAddedEmails = validEmailsToAdd.filter(e => !emails.includes(e))
+      if (newlyAddedEmails.length > 0) {
+        Promise.allSettled(
+          newlyAddedEmails.map(email => sendWelcomeEmailInternal(email))
+        ).then(results => {
+          results.forEach((r, i) => {
+            if (r.status === 'rejected') {
+              console.warn(`[emails] Welcome email failed for ${newlyAddedEmails[i]}:`, r.reason?.message || r.reason)
+            } else {
+              console.log(`[emails] Welcome email sent to ${newlyAddedEmails[i]}`)
+            }
+          })
+        })
       }
 
       return res.status(200).json({

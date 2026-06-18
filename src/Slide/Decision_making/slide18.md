@@ -54,30 +54,34 @@ transition: slide-up
 
 <div style="margin-top:12px;">
   <table class="cmp-table" >
-    <tr v-click>
-      <th>Feature</th>
-      <th>pass</th>
-      <th># Comment</th>
-    </tr>
-    <tr v-click>
-      <td>Seen by interpreter</td>
-      <td class="yes">✅ Yes</td>
-      <td class="no">❌ No</td>
-    </tr>
-    <tr v-click>
-      <td>Fills empty block</td>
-      <td class="yes">✅ Yes</td>
-      <td class="no">❌ No</td>
-    </tr>
-    <tr v-click>
-      <td>Explains code to humans</td>
-      <td class="no">❌ No</td>
-      <td class="yes">✅ Yes</td>
-    </tr>
-    <tr v-click>
-      <td>Used together?</td>
-      <td colspan="2" style="text-align:center;" class="yes">✅ Yes — use both! <code>pass  # TODO: implement</code></td>
-    </tr>
+    <thead>
+      <tr v-click>
+        <th>Feature</th>
+        <th>pass</th>
+        <th># Comment</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr v-click>
+        <td>Seen by interpreter</td>
+        <td class="yes">✅ Yes</td>
+        <td class="no">❌ No</td>
+      </tr>
+      <tr v-click>
+        <td>Fills empty block</td>
+        <td class="yes">✅ Yes</td>
+        <td class="no">❌ No</td>
+      </tr>
+      <tr v-click>
+        <td>Explains code to humans</td>
+        <td class="no">❌ No</td>
+        <td class="yes">✅ Yes</td>
+      </tr>
+      <tr v-click>
+        <td>Used together?</td>
+        <td colspan="2" style="text-align:center;" class="yes">✅ Yes — use both! <code>pass  # TODO: implement</code></td>
+      </tr>
+    </tbody>
   </table>
 </div>
   </template>
