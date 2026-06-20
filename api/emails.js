@@ -1,21 +1,20 @@
 import fs from 'node:fs'
 import path from 'node:path'
-import { initializeApp } from 'firebase/app'
+import { initializeApp, getApps, getApp } from 'firebase/app'
 import { getFirestore, doc, getDoc, setDoc } from 'firebase/firestore'
-import { sendWelcomeEmailInternal } from './send-welcome.js'
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyCBsNQ_QDJScHgMUv4blklp2fCACKtmzYQ",
-  authDomain: "test-db-2647b.firebaseapp.com",
-  projectId: "test-db-2647b",
-  storageBucket: "test-db-2647b.firebasestorage.app",
-  messagingSenderId: "593195733830",
-  appId: "1:593195733830:web:dcd89130dd877694d58b47"
+  apiKey: "AIzaSyDTG-okJuoxNlxJ9rizvLkwOjjn4AT0pW8",
+  authDomain: "slidev-pro-vercel-app-db.firebaseapp.com",
+  projectId: "slidev-pro-vercel-app-db",
+  storageBucket: "slidev-pro-vercel-app-db.firebasestorage.app",
+  messagingSenderId: "390478860852",
+  appId: "1:390478860852:web:a4045993367fe4e740b061"
 }
 
-// Initialize Firebase
-const firebaseApp = initializeApp(firebaseConfig)
+// Initialize Firebase — guard against duplicate initialization in Vite dev HMR
+const firebaseApp = getApps().find(a => a.name === 'slidev-pro') ?? initializeApp(firebaseConfig, 'slidev-pro')
 const db = getFirestore(firebaseApp)
 
 // Admin emails — must be kept in sync with ADMIN_EMAILS in LoginOverlay.vue
@@ -120,7 +119,7 @@ async function verifyGoogleToken(idToken) {
     }
     const payload = await response.json()
     // Verify client ID matches
-    const expectedClientId = '207254417956-jmlljaaj6kp3p8am8rdsivmsk9i6r7eu.apps.googleusercontent.com'
+    const expectedClientId = '207254417956-cgi3av80ac090nqrurpjkdhj19nievvp.apps.googleusercontent.com'
     if (payload.aud !== expectedClientId) {
       console.warn('Token aud does not match client ID')
       return null
@@ -221,23 +220,6 @@ export default async function handler(req, res) {
         return res.status(500).json({ error: 'Database Write Error: Failed to save changes to Firestore database and local storage is read-only.' })
       }
 
-      // ── Fire-and-forget welcome emails for each newly added address ──────
-      // We send after a successful save so we never email for failed writes.
-      // Failures here are non-fatal — the admin still gets a 200 response.
-      const newlyAddedEmails = validEmailsToAdd.filter(e => !emails.includes(e))
-      if (newlyAddedEmails.length > 0) {
-        Promise.allSettled(
-          newlyAddedEmails.map(email => sendWelcomeEmailInternal(email))
-        ).then(results => {
-          results.forEach((r, i) => {
-            if (r.status === 'rejected') {
-              console.warn(`[emails] Welcome email failed for ${newlyAddedEmails[i]}:`, r.reason?.message || r.reason)
-            } else {
-              console.log(`[emails] Welcome email sent to ${newlyAddedEmails[i]}`)
-            }
-          })
-        })
-      }
 
       return res.status(200).json({
         emails: updatedList,

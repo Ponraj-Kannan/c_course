@@ -1,5 +1,5 @@
 <script setup>
-import { ref, computed, onMounted, onUnmounted, nextTick, watchEffect } from 'vue'
+import { ref, computed, onMounted, onUnmounted, nextTick, watchEffect, watch } from 'vue'
 import { authState, logout } from '../auth'
 
 const ADMIN_EMAILS = [
@@ -20,16 +20,24 @@ let zohoPopupWindow = null
 
 const SUPER_ADMIN = 'ponrajacc@gmail.com'
 
-// Sync auth state with DOM body/html classes to hide/show slides securely
-watchEffect(() => {
-  if (typeof document !== 'undefined') {
-    if (authState.isLoggedIn) {
-      document.documentElement.classList.add('auth-success')
-    } else {
-      document.documentElement.classList.remove('auth-success')
+// Sync auth state with DOM body/html classes to hide/show slides securely.
+// Use watch() with flush:'post' so the DOM class update runs AFTER Slidev's
+// own watchers (including updateSharedState) have already initialised nav.current.
+// This prevents the "Cannot read properties of undefined (reading 'current')" error
+// that occurred when watchEffect fired synchronously during Slidev's bootstrap.
+watch(
+  () => authState.isLoggedIn,
+  (isLoggedIn) => {
+    if (typeof document !== 'undefined') {
+      if (isLoggedIn) {
+        document.documentElement.classList.add('auth-success')
+      } else {
+        document.documentElement.classList.remove('auth-success')
+      }
     }
-  }
-})
+  },
+  { flush: 'post', immediate: true }
+)
 
 // Fullscreen helpers
 function enterFullscreen() {
@@ -340,7 +348,7 @@ function initGoogleSignIn() {
       }
 
       window.google.accounts.id.initialize({
-        client_id: '207254417956-jmlljaaj6kp3p8am8rdsivmsk9i6r7eu.apps.googleusercontent.com',
+        client_id: '207254417956-cgi3av80ac090nqrurpjkdhj19nievvp.apps.googleusercontent.com',
         callback: handleGoogleSignInCallback,
         auto_select: false
       })
@@ -523,20 +531,25 @@ onMounted(() => {
   // Listen for Zoho popup postMessage
   window.addEventListener('message', handleZohoMessage)
 
-  checkAuthSession().then(() => {
-    if (typeof window.google === 'undefined') {
-      const script = document.createElement('script')
-      script.src = 'https://accounts.google.com/gsi/client'
-      script.async = true
-      script.defer = true
-      script.onload = () => initGoogleSignIn()
-      script.onerror = () => {
-        errorMessage.value = 'Could not load Google Sign-In SDK. Check your internet connection.'
+  // Defer auth session check to nextTick so Slidev's navigation context
+  // (nav.current used by updateSharedState in root.ts) is fully initialised
+  // before any authState mutations trigger Slidev's internal shared-state watchers.
+  nextTick(() => {
+    checkAuthSession().then(() => {
+      if (typeof window.google === 'undefined') {
+        const script = document.createElement('script')
+        script.src = 'https://accounts.google.com/gsi/client'
+        script.async = true
+        script.defer = true
+        script.onload = () => initGoogleSignIn()
+        script.onerror = () => {
+          errorMessage.value = 'Could not load Google Sign-In SDK. Check your internet connection.'
+        }
+        document.head.appendChild(script)
+      } else {
+        initGoogleSignIn()
       }
-      document.head.appendChild(script)
-    } else {
-      initGoogleSignIn()
-    }
+    })
   })
 })
 
