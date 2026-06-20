@@ -1,13 +1,15 @@
 # Dependencies
-/node_modules/
+node_modules/
 
 # Scratch files (development testing/scratch scripts)
 /scratch/
 
 # Build outputs
-/dist/
-/src/dist/
+dist/
 /dev-dist/
+.slidev/
+.vite-temp/
+_export/
 
 # Local configuration and credentials
 client_secret_*.json
