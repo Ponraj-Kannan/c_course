@@ -6,7 +6,7 @@ transition: slide-up
      SLIDE 11 — ARRAYS VS POINTERS: KEY DIFFERENCES
 ═══════════════════════════════════════════════════════ -->
 
-<Slide2 topic="Arrays in C">
+<Slide2 topic="Pointers in C">
   <template #content>
 
 <div class="slide-h1" style="margin-bottom:10px;"><span class="highlight">Arrays</span> vs <span class="highlight">Pointers</span> — Key Differences</div>

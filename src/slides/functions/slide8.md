@@ -60,7 +60,6 @@ transition: slide-up
   <div v-click class="section-label">Types of Functions by Parameters</div>
 
   <div style="display:flex;flex-direction:column;gap:8px;">
-
     <div v-click class="card" style="padding:10px 14px;">
       <div style="display:flex;gap:8px;align-items:center;margin-bottom:4px;">
         <span class="pill pill-navy">No Arguments, No Return</span>
@@ -69,7 +68,6 @@ transition: slide-up
         <span style="color:#b45309;">void</span> <span style="color:#0e6ead;">greet</span>() { <span style="color:#2d7a00;">printf</span>(<span style="color:#2d7a00;">"Hi!"</span>); }
       </div>
     </div>
-
     <div v-click class="card" style="padding:10px 14px;">
       <div style="display:flex;gap:8px;align-items:center;margin-bottom:4px;">
         <span class="pill pill-green">With Arguments, No Return</span>
@@ -78,7 +76,6 @@ transition: slide-up
         <span style="color:#b45309;">void</span> <span style="color:#0e6ead;">printNum</span>(<span style="color:#b45309;">int</span> n) { <span style="color:#2d7a00;">printf</span>(<span style="color:#2d7a00;">"%d"</span>, n); }
       </div>
     </div>
-
     <div v-click class="card" style="padding:10px 14px;">
       <div style="display:flex;gap:8px;align-items:center;margin-bottom:4px;">
         <span class="pill pill-blue">No Arguments, With Return</span>
@@ -87,7 +84,6 @@ transition: slide-up
         <span style="color:#b45309;">int</span> <span style="color:#0e6ead;">getYear</span>() { <span style="color:#ef5050;">return</span> <span style="color:#b45309;">2025</span>; }
       </div>
     </div>
-
     <div v-click class="card" style="padding:10px 14px;">
       <div style="display:flex;gap:8px;align-items:center;margin-bottom:4px;">
         <span class="pill pill-red">With Arguments &amp; Return</span>

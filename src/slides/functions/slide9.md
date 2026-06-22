@@ -45,28 +45,23 @@ transition: slide-up
   <div v-click class="section-label">Important Rules</div>
 
   <div style="display:flex;flex-direction:column;gap:6px;">
-
     <div style="display:flex;gap:10px;align-items:flex-start;" v-click>
       <div style="background:var(--red);color:#fff;border-radius:6px;padding:3px 8px;font-size:.62rem;font-weight:800;flex-shrink:0;">R1</div>
       <div class="body-text">The return type in the function signature <strong>must match</strong> the type of the returned value.</div>
     </div>
-
     <div style="display:flex;gap:10px;align-items:flex-start;" v-click>
       <div style="background:var(--blue);color:#fff;border-radius:6px;padding:3px 8px;font-size:.62rem;font-weight:800;flex-shrink:0;">R2</div>
       <div class="body-text">A <span class="mono" style="color:var(--red-dark);">void</span> function must <strong>not</strong> return a value — use plain <span class="mono">return;</span> if you need early exit.</div>
     </div>
-
     <div style="display:flex;gap:10px;align-items:flex-start;" v-click>
       <div style="background:var(--green);color:#fff;border-radius:6px;padding:3px 8px;font-size:.62rem;font-weight:800;flex-shrink:0;">R3</div>
       <div class="body-text">Execution stops at <span class="mono" style="color:var(--red-dark);">return</span> — any code after it in the same function is <strong>unreachable</strong>.</div>
     </div>
-
     <div style="display:flex;gap:10px;align-items:flex-start;" v-click>
       <div style="background:var(--orange);color:#fff;border-radius:6px;padding:3px 8px;font-size:.62rem;font-weight:800;flex-shrink:0;">R4</div>
       <div class="body-text">A function can have <strong>multiple return statements</strong> (e.g. in if-else branches).</div>
     </div>
   </div>
-
   <div v-click style="background:#f6f8fa;border-radius:10px;border:1px solid #e1e4e8;padding:12px 14px;font-family:'Fira Code',monospace;font-size:.72rem;line-height:1.9;margin-top:4px;">
     <span style="color:#6b7280;">/* Multiple return example */</span><br>
     <span style="color:#b45309;">int</span> <span style="color:#0e6ead;">absVal</span>(<span style="color:#b45309;">int</span> n) {<br>

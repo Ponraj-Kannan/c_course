@@ -6,7 +6,7 @@ transition: slide-up
      SLIDE 1 — WHAT IS AN ARRAY?
 ═══════════════════════════════════════════════════════ -->
 
-<Slide2 topic="Arrays in C">
+<Slide2 topic="Pointers in C">
   <template #content>
 
 <div class="slide-h1" style="margin-bottom:12px;">What is an <span class="highlight">Array?</span></div>

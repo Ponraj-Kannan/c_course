@@ -44,7 +44,6 @@ transition: slide-up
   <div v-click class="section-label">Memory Diagram — Pass by Value</div>
 
   <div v-after style="display:flex;gap:12px;align-items:flex-start;margin-top:4px;">
-
     <div style="flex:1;">
       <div style="font-size:.62rem;color:var(--muted);font-weight:700;text-transform:uppercase;letter-spacing:1px;text-align:center;margin-bottom:6px;">main()'s memory</div>
       <div class="mem-box mem-global">
@@ -57,9 +56,7 @@ transition: slide-up
         </div>
       </div>
     </div>
-
     <div style="font-size:1.2rem;color:var(--muted);padding-top:40px;">→</div>
-
     <div style="flex:1;">
       <div style="font-size:.62rem;color:var(--muted);font-weight:700;text-transform:uppercase;letter-spacing:1px;text-align:center;margin-bottom:6px;">doubleIt()'s memory</div>
       <div class="mem-box mem-local">

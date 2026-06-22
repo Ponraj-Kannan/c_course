@@ -43,8 +43,12 @@ src: ./question5.md
 src: ./slide6.md
 ---
 
----
+<!-- ---
 src: ./question6.md
+--- -->
+
+---
+src: ../arrays/main1.md
 ---
 
 ---
@@ -53,6 +57,10 @@ src: ./slide7.md
 
 ---
 src: ./question7.md
+---
+
+---
+src: ../arrays/main2.md
 ---
 
 ---

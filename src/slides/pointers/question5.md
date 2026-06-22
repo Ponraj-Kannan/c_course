@@ -15,6 +15,6 @@ const contents = [
 
 <Slide
   topic="Pointers in C"
-  sub-topic="Practice Problems — Slide 5: Pointer Arithmetic"
+  sub-topic="Practice Problems"
   :contents="contents"
 />

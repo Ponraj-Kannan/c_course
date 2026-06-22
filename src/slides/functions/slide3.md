@@ -60,21 +60,17 @@ transition: slide-up
     }
   </div>
 
-  <div v-click style="display:flex;flex-direction:column;gap:6px;margin-top:2px;">
-    <div style="display:flex;align-items:center;gap:8px;">
-      <div style="background:var(--red);color:#fff;border-radius:5px;padding:2px 8px;font-size:.62rem;font-weight:700;flex-shrink:0;">①</div>
+  <div style="display:flex;flex-direction:column;gap:6px;margin-top:2px;">
+    <div v-click style="display:flex;align-items:center;gap:8px;">
       <div class="body-text"><span class="mono" style="color:var(--red-dark);">int</span> — return type: this function gives back an integer</div>
     </div>
-    <div style="display:flex;align-items:center;gap:8px;">
-      <div style="background:var(--blue);color:#fff;border-radius:5px;padding:2px 8px;font-size:.62rem;font-weight:700;flex-shrink:0;">②</div>
+    <div v-click style="display:flex;align-items:center;gap:8px;">
       <div class="body-text"><span class="mono" style="color:#0e6ead;">add</span> — function name (descriptive!)</div>
     </div>
-    <div style="display:flex;align-items:center;gap:8px;">
-      <div style="background:var(--green);color:#fff;border-radius:5px;padding:2px 8px;font-size:.62rem;font-weight:700;flex-shrink:0;">③</div>
-      <div class="body-text"><span class="mono" style="color:var(--green);">int a, int b</span> — two parameters (inputs)</div>
+    <div v-click style="display:flex;align-items:center;gap:8px;">
+      <div class="body-text"><span class="mono" style="color:var(--green);">(int a, int b)</span> — two parameters (inputs)</div>
     </div>
-    <div style="display:flex;align-items:center;gap:8px;">
-      <div style="background:var(--orange);color:#fff;border-radius:5px;padding:2px 8px;font-size:.62rem;font-weight:700;flex-shrink:0;">④</div>
+    <div v-click style="display:flex;align-items:center;gap:8px;">
       <div class="body-text"><span class="mono" style="color:var(--orange);">return result</span> — sends the computed value back to caller</div>
     </div>
   </div>

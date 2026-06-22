@@ -9,7 +9,7 @@ const props = defineProps({
   /** The language to use in OneCompiler. Supported: java, python, cpp */
   language: {
     type: String,
-    default: 'python'
+    default: 'c'
   },
   /** Key from CODE_LIBRARY to use as starter code */
   codeKey: {

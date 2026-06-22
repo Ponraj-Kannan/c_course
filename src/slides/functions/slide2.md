@@ -2,10 +2,6 @@
 transition: slide-up
 ---
 
-<!-- ═══════════════════════════════════════════════════════
-     SLIDE 2 — WHAT IS A FUNCTION?
-═══════════════════════════════════════════════════════ -->
-
 <Slide2 topic="Functions in C">
   <template #content>
 
@@ -27,19 +23,19 @@ transition: slide-up
 
   <div v-click class="section-label" style="margin-top:4px;">Why Use Functions?</div>
   <div style="display:flex;flex-direction:column;gap:6px;">
-    <div style="display:flex;align-items:center;gap:10px;" v-after>
+    <div v-click style="display:flex;align-items:center;gap:10px;">
       <div class="icon-circle ic-green">♻️</div>
       <div class="body-text"><strong>Reusability</strong> — Write once, use many times anywhere in the program.</div>
     </div>
-    <div style="display:flex;align-items:center;gap:10px;" v-click>
+    <div v-click style="display:flex;align-items:center;gap:10px;">
       <div class="icon-circle ic-blue">🧩</div>
       <div class="body-text"><strong>Modularity</strong> — Break a big problem into smaller, manageable pieces.</div>
     </div>
-    <div style="display:flex;align-items:center;gap:10px;" v-click>
+    <div v-click style="display:flex;align-items:center;gap:10px;">
       <div class="icon-circle ic-orange">🐛</div>
       <div class="body-text"><strong>Easier Debugging</strong> — Isolate and fix problems in one place.</div>
     </div>
-    <div style="display:flex;align-items:center;gap:10px;" v-click>
+    <div v-click style="display:flex;align-items:center;gap:10px;">
       <div class="icon-circle ic-red">📖</div>
       <div class="body-text"><strong>Readability</strong> — Named functions make code self-documenting.</div>
     </div>
@@ -48,11 +44,8 @@ transition: slide-up
 </div>
 
 <div class="flex-col">
-
-  <div v-click class="section-label">Without vs With Functions</div>
-
-  <div v-after style="display:flex;flex-direction:column;gap:8px;">
-    <div style="background:var(--red-soft);border:1px solid var(--red);border-radius:10px;padding:12px 14px;">
+  <div style="display:flex;flex-direction:column;gap:8px;">
+    <div v-click style="background:var(--red-soft);border:1px solid var(--red);border-radius:10px;padding:12px 14px;">
       <div style="font-size:.65rem;font-weight:700;color:var(--red-dark);text-transform:uppercase;letter-spacing:1px;margin-bottom:6px;">❌ Without Functions (repetitive)</div>
       <div style="font-family:'Fira Code',monospace;font-size:.7rem;line-height:1.9;color:var(--slate);">
         <span style="color:#6b7280;">/* Add two numbers — first time */</span><br>
@@ -62,8 +55,7 @@ transition: slide-up
         <span style="color:#6b7280;">/* ... repeated everywhere */</span>
       </div>
     </div>
-
-    <div style="background:#f0fff4;border:1px solid var(--green);border-radius:10px;padding:12px 14px;">
+    <div v-click style="background:#f0fff4;border:1px solid var(--green);border-radius:10px;padding:12px 14px;">
       <div style="font-size:.65rem;font-weight:700;color:var(--green);text-transform:uppercase;letter-spacing:1px;margin-bottom:6px;">✔ With Functions (clean &amp; reusable)</div>
       <div style="font-family:'Fira Code',monospace;font-size:.7rem;line-height:1.9;color:var(--slate);">
         <span style="color:#b45309;">int</span> <span style="color:#0e6ead;">add</span>(<span style="color:#b45309;">int</span> a, <span style="color:#b45309;">int</span> b) { <span style="color:#ef5050;">return</span> a+b; }<br>

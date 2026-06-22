@@ -6,7 +6,7 @@ transition: slide-up
      SLIDE 10 — PASSING ARRAYS TO FUNCTIONS: 2D
 ═══════════════════════════════════════════════════════ -->
 
-<Slide2 topic="Arrays in C">
+<Slide2 topic="Pointers in C">
   <template #content>
 
 <div class="slide-h1" style="margin-bottom:10px;">Passing Arrays to Functions — <span class="highlight">2D</span></div>

@@ -48,7 +48,7 @@ src: ./slide21.md
 transition: slide-up
 ---
 
----
+<!-- ---
 src: ./slide22.md
 transition: slide-up
 ---
@@ -56,5 +56,4 @@ transition: slide-up
 ---
 src: ./slide24.md
 transition: slide-up
----
-
+--- -->
