@@ -6,7 +6,7 @@ transition: slide-up
      SLIDE 5 — ARRAY BOUNDS & COMMON ERRORS
 ═══════════════════════════════════════════════════════ -->
 
-<Slide2 topic="Pointers in C">
+<Slide2 topic="Arrays in C">
   <template #content>
 
 <div class="slide-h1" style="margin-bottom:10px;">Array <span class="highlight">Bounds</span> &amp; Common Errors</div>

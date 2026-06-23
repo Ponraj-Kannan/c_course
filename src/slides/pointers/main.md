@@ -48,10 +48,6 @@ src: ./question6.md
 --- -->
 
 ---
-src: ../arrays/main1.md
----
-
----
 src: ./slide7.md
 ---
 

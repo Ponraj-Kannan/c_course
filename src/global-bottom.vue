@@ -1,10 +1,10 @@
 <script setup>
-import { computed, ref } from 'vue'
+import { computed, ref, onMounted, onUnmounted } from 'vue'
 import { useNav, useSlideContext } from '@slidev/client'
 import LoginOverlay from './components/LoginOverlay.vue'
 import { authState, logout } from './auth'
 
-const { currentPage, total, currentSlideRoute } = useNav()
+const { currentPage, total, currentSlideRoute, go } = useNav()
 const { $frontmatter } = useSlideContext()
 
 const sessionLabel = computed(() => $frontmatter.value?.sessionLabel || 'Session')
@@ -63,6 +63,17 @@ async function handleLogout() {
     logout()
   }
 }
+
+// ── Alt+T — jump to roadmap (slide 1) from anywhere ───────────────────────
+function handleAltT(e) {
+  if (e.altKey && (e.key === 't' || e.key === 'T')) {
+    e.preventDefault()
+    go(2)
+  }
+}
+
+onMounted(() => window.addEventListener('keydown', handleAltT))
+onUnmounted(() => window.removeEventListener('keydown', handleAltT))
 </script>
 
 <template>
@@ -73,7 +84,21 @@ async function handleLogout() {
     <!-- Slides Footer - only visible when logged in -->
     <div class="fp-footer" v-if="authState.isLoggedIn" >
       <div class="fp-right-section">
+        <!-- Roadmap Home Button -->
+        <button
+          @click="go(2)"
+          class="fp-admin-btn"
+          :class="{ 'fp-admin-btn--active': currentPage === 1 }"
+          title="Course Roadmap (Alt+T)"
+        >
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="fp-icon">
+            <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
+            <polyline points="9 22 9 12 15 12 15 22"/>
+          </svg>
+        </button>
+
         <!-- Whitelist Admin Panel Button -->
+
         <button 
           v-if="authState.isAdmin" 
           @click="authState.showAdminPanel = !authState.showAdminPanel" 

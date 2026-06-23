@@ -6,7 +6,7 @@ transition: slide-up
      SLIDE 2 — DECLARING & INITIALIZING ARRAYS
 ═══════════════════════════════════════════════════════ -->
 
-<Slide2 topic="Pointers in C">
+<Slide2 topic="Arrays in C">
   <template #content>
 
 <div class="slide-h1" style="margin-bottom:10px;">Declaring &amp; <span class="highlight">Initializing</span> Arrays</div>

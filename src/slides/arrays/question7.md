@@ -17,7 +17,7 @@ const contents = [
 </script>
 
 <Slide
-  topic="Pointers in C"
+  topic="Arrays in C"
   sub-topic="Practice Problems — Arrays and Pointers"
   :contents="contents"
 />

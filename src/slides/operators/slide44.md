@@ -43,13 +43,13 @@ transition: slide-up
       <span class="pill pill-red">Arithmetic</span>
       <span class="small-text" style="align-self:center;">— +  −  *  /  %</span>
     </div>
-    <div style="display:flex;gap:6px;flex-wrap:wrap;" v-click>
-      <span class="pill pill-blue">Assignment</span>
-      <span class="small-text" style="align-self:center;">— =  +=  -=  *=  …</span>
-    </div>
-    <div style="display:flex;gap:6px;flex-wrap:wrap;" v-click>
+     <div style="display:flex;gap:6px;flex-wrap:wrap;" v-click>
       <span class="pill pill-orange">Relational</span>
       <span class="small-text" style="align-self:center;">— ==  !=  >  <  >=  <=</span>
+    </div>
+        <div style="display:flex;gap:6px;flex-wrap:wrap;" v-click>
+      <span class="pill" style="background:#f0e6ff;color:#6b21a8;">Increment/Decrement</span>
+      <span class="small-text" style="align-self:center;">— ++  --</span>
     </div>
     <div style="display:flex;gap:6px;flex-wrap:wrap;" v-click>
       <span class="pill pill-green">Logical</span>
@@ -60,8 +60,8 @@ transition: slide-up
       <span class="small-text" style="align-self:center;">— &  |  ^  ~  <<  >></span>
     </div>
     <div style="display:flex;gap:6px;flex-wrap:wrap;" v-click>
-      <span class="pill" style="background:#f0e6ff;color:#6b21a8;">Increment/Decrement</span>
-      <span class="small-text" style="align-self:center;">— ++  --</span>
+      <span class="pill pill-blue">Assignment</span>
+      <span class="small-text" style="align-self:center;">— =  +=  -=  *=  …</span>
     </div>
     <div style="display:flex;gap:6px;flex-wrap:wrap;" v-click>
       <span class="pill" style="background:#fef9c3;color:#854d0e;">Conditional (Ternary)</span>

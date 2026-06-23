@@ -6,7 +6,7 @@ transition: slide-up
      SLIDE 8 — ARRAYS AND POINTERS
 ═══════════════════════════════════════════════════════ -->
 
-<Slide2 topic="Pointers in C">
+<Slide2 topic="Arrays in C">
   <template #content>
 
 <div class="slide-h1" style="margin-bottom:10px;"><span class="highlight">Arrays</span> and <span class="highlight">Pointers</span></div>

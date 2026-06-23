@@ -47,10 +47,21 @@ src: ./slides/loops/main.md
 ---
 
 ---
+src: ./slides/arrays/main1.md
+---
+
+---
 src: ./slides/pointers/main.md
+---
+
+---
+src: ./slides/memory_allocation/main.md
 ---
 
 ---
 src: ./slides/functions/main.md
 ---
 
+<!-- ---
+src: ./slides/recursion/main.md
+--- -->

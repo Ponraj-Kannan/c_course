@@ -6,7 +6,7 @@ transition: slide-up
      SLIDE 3 — ACCESSING & MODIFYING ARRAY ELEMENTS
 ═══════════════════════════════════════════════════════ -->
 
-<Slide2 topic="Pointers in C">
+<Slide2 topic="Arrays in C">
   <template #content>
 
 <div class="slide-h1" style="margin-bottom:10px;"><span class="highlight">Accessing</span> &amp; <span class="highlight">Modifying</span> Elements</div>

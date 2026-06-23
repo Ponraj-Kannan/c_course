@@ -6,7 +6,7 @@ transition: slide-up
      SLIDE 7 — INITIALIZING & ACCESSING 2D ARRAYS
 ═══════════════════════════════════════════════════════ -->
 
-<Slide2 topic="Pointers in C">
+<Slide2 topic="Arrays in C">
   <template #content>
 
 <div class="slide-h1" style="margin-bottom:10px;"><span class="highlight">Initializing</span> &amp; <span class="highlight">Accessing</span> 2D Arrays</div>

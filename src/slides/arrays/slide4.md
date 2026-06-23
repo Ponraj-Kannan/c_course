@@ -6,7 +6,7 @@ transition: slide-up
      SLIDE 4 — TRAVERSING AN ARRAY
 ═══════════════════════════════════════════════════════ -->
 
-<Slide2 topic="Pointers in C">
+<Slide2 topic="Arrays in C">
   <template #content>
 
 <div class="slide-h1" style="margin-bottom:10px;"><span class="highlight">Traversing</span> an Array</div>
