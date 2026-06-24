@@ -1,38 +1,23 @@
----
-src: ./slide6.md
----
 
----
-src: ./question5.md
----
-
----
-src: ./slide7.md
----
-
----
-src: ./question6.md
----
-
----
+<!-- ---
 src: ./slide8.md
 ---
 
 ---
 src: ./question7.md
----
+--- -->
 
----
+<!-- ---
 src: ./slide10.md
----
+--- -->
 
----
+<!-- ---
 src: ./question9.md
 ---
 
 ---
 src: ./slide11.md
----
+--- -->
 <!-- 
 ---
 src: ./extra_question1.md

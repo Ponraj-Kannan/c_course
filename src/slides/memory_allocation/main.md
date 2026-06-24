@@ -41,7 +41,7 @@ src: ./slide7.md
 ---
 src: ./question5.md
 ---
-
+<!-- 
 ---
 src: ./slide8.md
 ---
@@ -64,4 +64,8 @@ src: ./slide10.md
 
 ---
 src: ./slide11.md
+--- -->
+
+---
+src: ./slide10.md
 ---

@@ -9,6 +9,6 @@ const contents = [
 
 <Slide
   topic="Recursion"
-  sub-topic="Practice Problem 7 — Reverse a String"
+  sub-topic="Practice Problem"
   :contents="contents"
 />

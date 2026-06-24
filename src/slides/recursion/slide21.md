@@ -10,6 +10,6 @@ const contents = [
 
 <Slide
   topic="Recursion"
-  sub-topic="Practice Problem 1 — Factorial"
+  sub-topic="Practice Problem"
   :contents="contents"
 />

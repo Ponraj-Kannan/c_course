@@ -26,34 +26,30 @@ src: ./slide4.md
 src: ./question3.md
 ---
 
-<!-- ---
-src: ./slide9.md
 ---
-
----
-src: ./question8.md
---- -->
-
-<!-- ---
 src: ./slide5.md
 ---
 
 ---
 src: ./question4.md
---- -->
+---
 
-<!-- ---
+---
 src: ./slide6.md
 ---
 
 ---
 src: ./question5.md
---- -->
-
----
-src: ../pointers/slide6.md
 ---
 
 ---
-src: ../pointers/question5.md
+src: ./slide7.md
+---
+
+---
+src: ./question6.md
+---
+
+---
+src: ./slide8.md
 ---

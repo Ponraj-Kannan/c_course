@@ -22,6 +22,7 @@ transition: slide-up
   </div>
 
   <div>
+   <div v-click class="section-label" style="margin-top:8px;">Truth Table</div>
     <table class="cmp-table" style="font-size:.7rem;margin-top:6px;">
       <thead v-click><tr><th>Operator</th><th>Name</th><th>Example (a=5, b=3)</th><th>Result</th></tr></thead>
       <tbody>
@@ -34,7 +35,6 @@ transition: slide-up
       </tbody>
     </table>
   </div>
-
 </div>
 
 <div class="flex-col">

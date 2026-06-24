@@ -28,10 +28,6 @@ transition: slide-up
     }
   </div>
 
-  <div v-click class="callout callout-danger">
-    <div><strong>Missing base case = Stack Overflow!</strong> C has no automatic recursion limit — an infinite recursion crashes your program with a segmentation fault.</div>
-  </div>
-
   <div v-click class="card-green" style="font-size:.75rem;">
     <strong>Good base cases check for:</strong>
     <div style="margin-top:6px;display:flex;flex-direction:column;gap:3px;">

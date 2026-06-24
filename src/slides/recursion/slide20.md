@@ -10,6 +10,6 @@ const contents = [
 
 <Slide
   topic="Recursion"
-  sub-topic="Practice Problem 2 — Fibonacci"
+  sub-topic="Practice Problem"
   :contents="contents"
 />

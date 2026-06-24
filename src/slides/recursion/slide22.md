@@ -10,6 +10,6 @@ const contents = [
 
 <Slide
   topic="Recursion"
-  sub-topic="Practice Problem 3 — Sum of Digits"
+  sub-topic="Practice Problem"
   :contents="contents"
 />

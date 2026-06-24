@@ -16,12 +16,12 @@ transition: slide-up
 <div class="flex-col">
   <div v-click class="section-label">Two Phases of Recursion</div>
 
-  <div v-after class="g2" style="gap:8px;">
-    <div class="card-blue" style="text-align:center;">
+  <div class="g2" style="gap:8px;">
+    <div v-click class="card-blue" style="text-align:center;">
       <div class="slide-h3" style="color:var(--blue);">Winding Phase</div>
       <div class="small-text" style="margin-top:4px;">Function keeps calling itself — frames pile up on the stack.</div>
     </div>
-    <div class="card-purple" style="text-align:center;">
+    <div v-click class="card-purple" style="text-align:center;">
       <div class="slide-h3" style="color:var(--purple);">Unwinding Phase</div>
       <div class="small-text" style="margin-top:4px;">Base case hit — frames return values and pop off one by one.</div>
     </div>
@@ -36,11 +36,7 @@ transition: slide-up
     <span style="color:#2d7a00;">printf</span>(<span style="color:#b45309;">"%d"</span>, <span style="color:#2d7a00;">factorial</span>(<span style="color:#b45309;">4</span>));
   </div>
 
-  <div v-click class="output-box" style="font-size:.72rem;">24</div>
-
-  <div v-click class="callout callout-warn" style="font-size:.7rem;">
-    <div><strong>Think of recursion in two directions:</strong> DOWN (calling) and UP (returning). Results travel back up the chain.</div>
-  </div>
+  <div v-after class="output-box" style="font-size:.72rem;">24</div>
 </div>
 
 <div class="flex-col">

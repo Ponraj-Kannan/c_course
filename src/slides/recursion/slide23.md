@@ -10,6 +10,6 @@ const contents = [
 
 <Slide
   topic="Recursion"
-  sub-topic="Practice Problem 5 — Palindrome Check"
+  sub-topic="Practice Problem"
   :contents="contents"
 />
