@@ -7,10 +7,6 @@ src: ./question7.md
 ---
 
 ---
-src: ../arrays/main2.md
----
-
----
 src: ./slide8.md
 ---
 
